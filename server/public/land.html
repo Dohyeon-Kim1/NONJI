@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Land Page</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <!-- 헤드 영역 -->
+  <header class="header">
+    <!-- <div class="logo">N</div> -->
+    <img class="logo_topleft" src="./assets/logos/nonji_logo.svg">
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Search...">
+      <img class="search-btn" src="./assets/imgs/search.svg">
+      <div id="resultsContainer"></div>
+    </div>
+    <div class="header-buttons">
+      <div class="nav-icons" id="profile">
+        <img src="./assets/logos/logo_profile.svg">
+        <div>Profile</div>
+      </div>
+
+      <div class="nav-icons" id="colab">
+        <img src="./assets/logos/logo_colab.svg">
+        <div>Colab</div>
+      </div>
+
+      <div class="nav-icons" id="setting">
+        <img src="./assets/logos/logo_setting.svg">
+        <div>Setting</div>
+      </div>
+
+      <div class="nav-icons" id="Log out">
+        <img src="./assets/logos/logo_logout.svg">
+        <div>Log out</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+      <div class="sideBar shadow">
+        <div class="profileDiv">
+            <div id="profileDivLeft">
+                <img id="profilePic" src="./assets/imgs/profilePic.png">
+                <div id="profileDesc">
+                    <div id="profileName">Taeyoon Kim</div>
+                    <div id="profileJob">AI Developer</div>
+                </div>
+            </div>
+            
+            <img id="profileArrow" src="./assets/logos/rightArrow.svg">
+        </div>
+        
+        <div class="leftAreaLine"></div>
+    
+        <div class="keywordDiv">
+            <div id="keywordTopRow">
+                <div id="myKeywords">My keywords</div>
+                <img src="./assets/logos/edit.svg">
+            </div>
+    
+            <div id="hashtagCards">
+                <div class="hashtagCardElement">#Generative Models</div>
+                <div class="hashtagCardElement">#Stable Diffusion</div>
+                <div class="hashtagCardElement">#OpenAI</div>
+                <div class="hashtagCardElement">#Multimodal Learning</div>
+                <div class="hashtagCardElement">#Machine Learning</div>
+                <div class="hashtagCardElement">#Deeplearning</div>
+            </div>
+        </div> 
+    
+        <div class="leftAreaLine"></div>
+        
+        <div id="savedProjectsAndInterestsDiv">
+            <div id="savedTopRow">
+                <div id="savedTopRowText">Saved Projects / Interest</div>
+                <div id="savedTopRowArrow">
+                    <div id="savedTopRowArrowCount">8</div>
+                    <img src="./assets/logos/smallRightArrow.svg">
+                </div>
+            </div>
+    
+            <div class="savedThumbnailDiv">
+                <img src="./assets/imgs/savedThumbnail.png">
+                <div class="savedThumbnailRight">
+                    <div class="savedThumbnailTopRight">
+                        <div class="paperTitle">You Only Look Once: Unifed, Real-Time Object Detection</div>
+                        <div class="conferenceName">CVPR/2016</div>
+                    </div>
+                    <div class="savedThumbnailBottomRight">
+                        <div class="interactionCountDiv">
+                            <div class="likeDiv">
+                                <img src="./assets/logos/heart_logo.svg">
+                                <div class="heartCount">1131</div>
+                            </div>
+                            <div class="viewDiv">
+                                <img src="./assets/logos/eye_logo.svg">
+                                <div class="viewCount">1131</div>
+                            </div>
+                        </div>
+    
+                        <div class="hashtagDiv">
+                            <div class="hashtagCardElement">#Detection</div>
+                            <div class="hashtagCardElement">#YOLO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="savedThumbnailDiv">
+                <img src="./assets/imgs/savedThumbnail.png">
+                <div class="savedThumbnailRight">
+                    <div class="savedThumbnailTopRight">
+                        <div class="paperTitle">You Only Look Once: Unifed, Real-Time Object Detection</div>
+                        <div class="conferenceName">CVPR/2016</div>
+                    </div>
+                    <div class="savedThumbnailBottomRight">
+                        <div class="interactionCountDiv">
+                            <div class="likeDiv">
+                                <img src="./assets/logos/heart_logo.svg">
+                                <div class="heartCount">1131</div>
+                            </div>
+                            <div class="viewDiv">
+                                <img src="./assets/logos/eye_logo.svg">
+                                <div class="viewCount">1131</div>
+                            </div>
+                        </div>
+    
+                        <div class="hashtagDiv">
+                            <div class="hashtagCardElement">#Detection</div>
+                            <div class="hashtagCardElement">#YOLO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="savedThumbnailDiv">
+                <img src="./assets/imgs/savedThumbnail.png">
+                <div class="savedThumbnailRight">
+                    <div class="savedThumbnailTopRight">
+                        <div class="paperTitle">You Only Look Once: Unifed, Real-Time Object Detection</div>
+                        <div class="conferenceName">CVPR/2016</div>
+                    </div>
+                    <div class="savedThumbnailBottomRight">
+                        <div class="interactionCountDiv">
+                            <div class="likeDiv">
+                                <img src="./assets/logos/heart_logo.svg">
+                                <div class="heartCount">1131</div>
+                            </div>
+                            <div class="viewDiv">
+                                <img src="./assets/logos/eye_logo.svg">
+                                <div class="viewCount">1131</div>
+                            </div>
+                        </div>
+    
+                        <div class="hashtagDiv">
+                            <div class="hashtagCardElement">#Detection</div>
+                            <div class="hashtagCardElement">#YOLO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="savedThumbnailDiv">
+                <img src="./assets/imgs/savedThumbnail.png">
+                <div class="savedThumbnailRight">
+                    <div class="savedThumbnailTopRight">
+                        <div class="paperTitle">You Only Look Once: Unifed, Real-Time Object Detection</div>
+                        <div class="conferenceName">CVPR/2016</div>
+                    </div>
+                    <div class="savedThumbnailBottomRight">
+                        <div class="interactionCountDiv">
+                            <div class="likeDiv">
+                                <img src="./assets/logos/heart_logo.svg">
+                                <div class="heartCount">1131</div>
+                            </div>
+                            <div class="viewDiv">
+                                <img src="./assets/logos/eye_logo.svg">
+                                <div class="viewCount">1131</div>
+                            </div>
+                        </div>
+    
+                        <div class="hashtagDiv">
+                            <div class="hashtagCardElement">#Detection</div>
+                            <div class="hashtagCardElement">#YOLO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="savedThumbnailDiv">
+                <img src="./assets/imgs/savedThumbnail.png">
+                <div class="savedThumbnailRight">
+                    <div class="savedThumbnailTopRight">
+                        <div class="paperTitle">You Only Look Once: Unifed, Real-Time Object Detection</div>
+                        <div class="conferenceName">CVPR/2016</div>
+                    </div>
+                    <div class="savedThumbnailBottomRight">
+                        <div class="interactionCountDiv">
+                            <div class="likeDiv">
+                                <img src="./assets/logos/heart_logo.svg">
+                                <div class="heartCount">1131</div>
+                            </div>
+                            <div class="viewDiv">
+                                <img src="./assets/logos/eye_logo.svg">
+                                <div class="viewCount">1131</div>
+                            </div>
+                        </div>
+    
+                        <div class="hashtagDiv">
+                            <div class="hashtagCardElement">#Detection</div>
+                            <div class="hashtagCardElement">#YOLO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+      <div class="rightContents" id="home">
+        <div class="rightTopBar">
+            <div class="topBarActive" id="rightTopHome">Home</div>
+            <div id="rightTopAI">AI Shorts 🪄</div>
+            <div id="rightTopLink">AI Link 🔗</div>
+          </div>
+        
+        <div class="categoryCardDiv">
+            <div class="categoryCard">Engineering & Computing</div>
+            <div class="categoryCard">Natural Sciences</div>
+            <div class="categoryCard">Life Sciences</div>
+            <div class="categoryCard">Mathematics</div>
+            <div class="categoryCard">Social Sciences & Humanities</div>
+            <div class="categoryCard">Design / Art / Media</div>
+        </div>
+
+        <div class="rightContents" id="HomeContents">
+            <div class="popularPaperDiv shadow">
+                <div class="poplularPaperDivTopRow">
+                    <div class="popPapDivTopRowTxtDiv">
+                        <div id="popPapDivTopRowTxt">Popular Paper</div>
+                        <img src="./assets/logos/star_logo.svg">
+                    </div>
+    
+                    <div class="sortingCriteria">
+                        <div id="daily">Daily</div>
+                        <div id="weekly">Weekly</div>
+                        <div id="monthly">Monthly</div>
+                    </div>
+                </div>
+    
+                <div class="leftAreaLine"></div>
+    
+                <div class="popPaperCarousel">
+                    <img id="carouselLeftArrow" src="./assets/imgs/left_bar.svg">
+    
+                    <div class="popPaperThumbnail">
+                        <div class="popPaperNum" id="popPaperFirst">1</div>
+                        <iframe class="shadow" src="https://arxiv.org/pdf/1706.03762#zoom=10" width="100%"></iframe>
+                        
+                        <div class="bottomInfo">
+                            <div class="papAuthor">
+                                <img class="papAuthorProfile" src="./assets/logos/Pp_writer_img.svg">
+                                <div class="papAuthorName">Vaswani et al.</div>
+                            </div>
+                            <div class="papInteraction">
+                                <div class="papLiked">
+                                    <img class="papLikedIcon" src="./assets/logos/Pp_heart_logo.svg">
+                                    <div id="papLikedNum">1325</div>
+                                </div>
+                                <div class="papViewed">
+                                    <img class="papViewedIcon" src="./assets/logos/Pp_read_logo.svg">
+                                    <div id="papViewedNum">13.2k</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="papTitle">Attention Is All You Need</div>
+                    </div>
+    
+                    <div class="popPaperThumbnail">
+                        <div class="popPaperNum" id="popPaperSecond">2</div>
+                        <iframe class="shadow" src="https://arxiv.org/pdf/1706.03762#zoom=10" width="100%"></iframe>
+                        <div class="bottomInfo">
+                            <div class="papAuthor">
+                                <img class="papAuthorProfile" src="./assets/logos/Pp_writer_img.svg">
+                                <div class="papAuthorName">Vaswani et al.</div>
+                            </div>
+                            <div class="papInteraction">
+                                <div class="papLiked">
+                                    <img class="papLikedIcon" src="./assets/logos/Pp_heart_logo.svg">
+                                    <div id="papLikedNum">1325</div>
+                                </div>
+                                <div class="papViewed">
+                                    <img class="papViewedIcon" src="./assets/logos/Pp_read_logo.svg">
+                                    <div id="papViewedNum">13.2k</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="papTitle">Attention Is All You Need</div>
+                    </div>
+    
+                    <div class="popPaperThumbnail">
+                        <div class="popPaperNum" id="popPaperThird">3</div>
+                        <iframe class="shadow" src="https://arxiv.org/pdf/1706.03762#zoom=10" width="100%"></iframe>
+                        <div class="bottomInfo">
+                            <div class="papAuthor">
+                                <img class="papAuthorProfile" src="./assets/logos/Pp_writer_img.svg">
+                                <div class="papAuthorName">Vaswani et al.</div>
+                            </div>
+                            <div class="papInteraction">
+                                <div class="papLiked">
+                                    <img class="papLikedIcon" src="./assets/logos/Pp_heart_logo.svg">
+                                    <div id="papLikedNum">1325</div>
+                                </div>
+                                <div class="papViewed">
+                                    <img class="papViewedIcon" src="./assets/logos/Pp_read_logo.svg">
+                                    <div id="papViewedNum">13.2k</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="papTitle">Attention Is All You Need</div>
+                    </div>
+    
+                    <img id="carouselRightArrow" src="./assets/imgs/right_bar.svg">
+                </div>
+    
+    
+            </div>
+    
+            <div class="popularPaperDiv shadow">
+                <div class="popPapDivTopRowTxtDiv">
+                    <div id="popPapDivTopRowTxt">Recent Paper</div>
+                    <img src="./assets/logos/clock.svg">
+                </div>
+    
+                <div class="leftAreaLine"></div>
+    
+                <img src="./assets/imgs/recentPaper.svg">
+                
+            </div>
+        </div>
+
+        <div class="rightContents hide" id="AI_Shorts">
+            <img style="margin-top: 1rem;" src="./assets/imgs/ai_shorts.svg" id="shortsSVG">
+        </div>
+
+        <div class="rightContents hide" id="AI_link">
+            <img style="margin-top: 1rem;" src="./assets/imgs/ai_recommendation.svg">
+        </div>
+      </div>
+
+        <div class="hide" id="myProfile">
+            <img src="./assets/logos/myProfile.svg">
+        </div>
+        <div class="hide" id="myColab">
+            <img src="./assets/imgs/DM.svg">
+        </div>
+
+
+      
+    <img src="./assets/imgs/Make_Post.svg" id="Make_Post">
+
+    <div id="postPop" class="hide">
+        <div style="width: 100vw; height: 100vh; background-color: rgba(0,0,0, 0.3);"></div>
+        <img src="./assets/imgs/postPopUp.svg" id="postPop_svg">
+    </div>
+    
+  </div>
+
+  <!-- Land 전용 JS (파일 경로: public/js/land.js) -->
+  <script src="js/land.js"></script>
+  <script src="./main.js" type="module"></script>
+</body>
+</html>

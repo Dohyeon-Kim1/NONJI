@@ -1,0 +1,13 @@
+{
+  "userID": "user_m9ej4bqs-072ce9780442b155",
+  "userName": "테스트 유저",
+  "postTitle": "테스트 게시글",
+  "postContent": "이것은 테스트 게시글의 내용입니다.",
+  "hashTags": [
+    "테스트",
+    "API"
+  ],
+  "postID": "post_m9ej4cke-d2eca78ecbb85f91",
+  "createdDate": "2025-04-12T18:08:13.214Z",
+  "updatedDate": "2025-04-12T18:08:13.214Z"
+}

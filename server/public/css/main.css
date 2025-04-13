@@ -1,0 +1,47 @@
+@import url(./login.css);
+@import url(./land.css);
+
+* {
+    margin: 0;
+    font-family: 'Pretendard';
+}
+
+:root {
+    --color-primary100: #303B59;
+    --color-primary200: #F8F5EC;
+    --color-primary300: #FF7660;
+    --color-primary400: #B4B9B0;
+    --color-gray200: #E6E8EA;
+    --color-gray100: #A3A8B2;
+    --color-gray300: #55575B;
+    --color-gray400: #797C82;
+    --color-gray600: #999A9C;
+    --color-black: #000;
+    --color-gray50: #F4F5F6;
+    --color-secondary: #FF8C79;
+    --color-pint: #FF6249;
+    --color-gray500: #C8C8CE;
+
+}
+
+.hide {
+    display: none;
+}
+
+#myProfile, #myColab {
+    position: absolute;
+    top: 6rem;
+    background-color: #f9f9f9;
+}
+
+#postPop {
+    position: absolute;
+    top: 0rem;
+}
+
+#postPop_svg {
+    position: absolute;
+    top: -1rem;
+    left: 50vw;
+    transform: translateX(-50%);
+}

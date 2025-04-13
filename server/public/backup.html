@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>백엔드 API 테스트 페이지</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { color: #333; }
+    section { margin-bottom: 20px; }
+    button { margin: 5px; padding: 10px 20px; }
+    #output { border: 1px solid #ccc; padding: 10px; min-height: 100px; background: #f9f9f9; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>백엔드 API 테스트 페이지</h1>
+  
+  <!-- 유저 테스트 섹션 -->
+  <section>
+    <h2>유저 테스트</h2>
+    <button id="createUser">유저 생성</button>
+    <button id="getUser">유저 조회</button>
+    <button id="updateUser">유저 수정</button>
+    <button id="deleteUser">유저 삭제</button>
+  </section>
+  
+  <!-- 게시글 테스트 섹션 -->
+  <section>
+    <h2>게시글 테스트</h2>
+    <button id="createPost">게시글 생성</button>
+    <button id="getPost">게시글 조회</button>
+    <button id="updatePost">게시글 수정</button>
+    <button id="deletePost">게시글 삭제</button>
+  </section>
+  
+  <!-- 댓글 테스트 섹션 -->
+  <section>
+    <h2>댓글 테스트</h2>
+    <button id="createComment">댓글 생성</button>
+    <button id="getComment">댓글 조회</button>
+    <button id="updateComment">댓글 수정</button>
+    <button id="deleteComment">댓글 삭제</button>
+  </section>
+  
+  <!-- 알림 테스트 섹션 -->
+  <section>
+    <h2>알림 테스트</h2>
+    <button id="createNotification">알림 생성</button>
+    <button id="getNotification">알림 조회</button>
+    <button id="updateNotification">알림 수정</button>
+    <button id="deleteNotification">알림 삭제</button>
+  </section>
+    
+    <!-- 로그인 테스트 섹션 -->
+  <section>
+    <h2>로그인 테스트</h2>
+    <label for="emailInput">이메일: </label>
+    <input type="email" id="emailInput" placeholder="user@example.com" />
+    <label for="pwInput">비밀번호: </label>
+    <input type="password" id="pwInput" placeholder="password" />
+    <button id="loginUser">로그인 시도</button>
+  </section>
+
+  
+  <!-- 결과 출력 영역 -->
+  <section>
+    <h2>출력 결과</h2>
+    <pre id="output"></pre>
+  </section>
+  
+  <script>
+    const output = document.getElementById('output');
+
+    // API 기본 URL (필요에 따라 수정)
+    const API_BASE = '/api';
+
+    // 각 테스트에 사용될 데이터 저장
+    let testUser = null;
+    let testPost = null;
+    let testComment = null;
+    let testNotification = null;
+
+    // API 요청 함수 (Fetch 사용)
+    async function request(url, method, data = null) {
+      const options = {
+        method,
+        headers: { 'Content-Type': 'application/json' }
+      };
+      if (data) options.body = JSON.stringify(data);
+      
+      try {
+        const res = await fetch(url, options);
+        const json = await res.json();
+        return json;
+      } catch (err) {
+        return { error: err.toString() };
+      }
+    }
+
+    /*------- 유저 테스트 -------*/
+    document.getElementById('createUser').addEventListener('click', async () => {
+      const userData = {
+        userName: '테스트 유저',
+        userEmail: 'test@example.com',
+        userPW: 'password',
+        userIntro: '테스트용 자기소개',
+        representatives: ['1234.123', '2345.345'],
+        hashTags: ['MLDL', 'CV', 'NLP', 'RL']
+      };
+      testUser = await request(`${API_BASE}/users`, 'POST', userData);
+      output.textContent = '유저 생성 결과:\n' + JSON.stringify(testUser, null, 2);
+    });
+
+    document.getElementById('getUser').addEventListener('click', async () => {
+      if (!testUser || !testUser.userID) {
+        output.textContent = '먼저 유저를 생성하세요.';
+        return;
+      }
+      const user = await request(`${API_BASE}/users/${testUser.userID}`, 'GET');
+      output.textContent = '유저 조회 결과:\n' + JSON.stringify(user, null, 2);
+    });
+
+    document.getElementById('updateUser').addEventListener('click', async () => {
+      if (!testUser || !testUser.userID) {
+        output.textContent = '먼저 유저를 생성하세요.';
+        return;
+      }
+      const updatedData = { userIntro: '수정된 자기소개' };
+      testUser = await request(`${API_BASE}/users/${testUser.userID}`, 'PUT', updatedData);
+      output.textContent = '유저 수정 결과:\n' + JSON.stringify(testUser, null, 2);
+    });
+
+    document.getElementById('deleteUser').addEventListener('click', async () => {
+      if (!testUser || !testUser.userID) {
+        output.textContent = '먼저 유저를 생성하세요.';
+        return;
+      }
+      const result = await request(`${API_BASE}/users/${testUser.userID}`, 'DELETE');
+      output.textContent = '유저 삭제 결과:\n' + JSON.stringify(result, null, 2);
+      testUser = null;
+    });
+
+    /*------- 게시글 테스트 -------*/
+    document.getElementById('createPost').addEventListener('click', async () => {
+      if (!testUser || !testUser.userID) {
+        output.textContent = '먼저 유저를 생성해야 합니다.';
+        return;
+      }
+      const postData = {
+        userID: testUser.userID,
+        userName: testUser.userName,
+        postTitle: '테스트 게시글',
+        postContent: '이것은 테스트 게시글의 내용입니다.',
+        hashTags: ['테스트', 'API']
+      };
+      testPost = await request(`${API_BASE}/posts`, 'POST', postData);
+      output.textContent = '게시글 생성 결과:\n' + JSON.stringify(testPost, null, 2);
+    });
+
+    document.getElementById('getPost').addEventListener('click', async () => {
+      if (!testPost || !testPost.postID) {
+        output.textContent = '먼저 게시글을 생성하세요.';
+        return;
+      }
+      const post = await request(`${API_BASE}/posts/${testPost.postID}`, 'GET');
+      output.textContent = '게시글 조회 결과:\n' + JSON.stringify(post, null, 2);
+    });
+
+    document.getElementById('updatePost').addEventListener('click', async () => {
+      if (!testPost || !testPost.postID) {
+        output.textContent = '먼저 게시글을 생성하세요.';
+        return;
+      }
+      const updatedData = { postContent: '수정된 게시글 내용입니다.' };
+      testPost = await request(`${API_BASE}/posts/${testPost.postID}`, 'PUT', updatedData);
+      output.textContent = '게시글 수정 결과:\n' + JSON.stringify(testPost, null, 2);
+    });
+
+    document.getElementById('deletePost').addEventListener('click', async () => {
+      if (!testPost || !testPost.postID) {
+        output.textContent = '먼저 게시글을 생성하세요.';
+        return;
+      }
+      const result = await request(`${API_BASE}/posts/${testPost.postID}`, 'DELETE');
+      output.textContent = '게시글 삭제 결과:\n' + JSON.stringify(result, null, 2);
+      testPost = null;
+    });
+
+    /*------- 댓글 테스트 -------*/
+    document.getElementById('createComment').addEventListener('click', async () => {
+      if (!testUser || !testUser.userID) {
+        output.textContent = '유저를 먼저 생성해야 합니다.';
+        return;
+      }
+      if (!testPost || !testPost.postID) {
+        output.textContent = '게시글을 먼저 생성해야 합니다.';
+        return;
+      }
+      const commentData = {
+        postID: testPost.postID,
+        userID: testUser.userID,
+        comment: '이것은 테스트 댓글입니다.'
+      };
+      testComment = await request(`${API_BASE}/comments`, 'POST', commentData);
+      output.textContent = '댓글 생성 결과:\n' + JSON.stringify(testComment, null, 2);
+    });
+
+    document.getElementById('getComment').addEventListener('click', async () => {
+      if (!testComment || !testComment.commentID) {
+        output.textContent = '먼저 댓글을 생성하세요.';
+        return;
+      }
+      const comment = await request(`${API_BASE}/comments/${testComment.commentID}`, 'GET');
+      output.textContent = '댓글 조회 결과:\n' + JSON.stringify(comment, null, 2);
+    });
+
+    document.getElementById('updateComment').addEventListener('click', async () => {
+      if (!testComment || !testComment.commentID) {
+        output.textContent = '먼저 댓글을 생성하세요.';
+        return;
+      }
+      const updatedData = { comment: '수정된 댓글 내용입니다.' };
+      testComment = await request(`${API_BASE}/comments/${testComment.commentID}`, 'PUT', updatedData);
+      output.textContent = '댓글 수정 결과:\n' + JSON.stringify(testComment, null, 2);
+    });
+
+    document.getElementById('deleteComment').addEventListener('click', async () => {
+      if (!testComment || !testComment.commentID) {
+        output.textContent = '먼저 댓글을 생성하세요.';
+        return;
+      }
+      const result = await request(`${API_BASE}/comments/${testComment.commentID}`, 'DELETE');
+      output.textContent = '댓글 삭제 결과:\n' + JSON.stringify(result, null, 2);
+      testComment = null;
+    });
+
+    /*------- 알림 테스트 -------*/
+    document.getElementById('createNotification').addEventListener('click', async () => {
+      if (!testUser || !testUser.userID) {
+        output.textContent = '유저를 먼저 생성해야 합니다.';
+        return;
+      }
+      const notiData = {
+        userID: testUser.userID,
+        message: '테스트 알림 메시지'
+      };
+      testNotification = await request(`${API_BASE}/notifications`, 'POST', notiData);
+      output.textContent = '알림 생성 결과:\n' + JSON.stringify(testNotification, null, 2);
+    });
+
+    document.getElementById('getNotification').addEventListener('click', async () => {
+      if (!testNotification || !testNotification.notificationID) {
+        output.textContent = '먼저 알림을 생성하세요.';
+        return;
+      }
+      const noti = await request(`${API_BASE}/notifications/${testNotification.notificationID}`, 'GET');
+      output.textContent = '알림 조회 결과:\n' + JSON.stringify(noti, null, 2);
+    });
+
+    document.getElementById('updateNotification').addEventListener('click', async () => {
+      if (!testNotification || !testNotification.notificationID) {
+        output.textContent = '먼저 알림을 생성하세요.';
+        return;
+      }
+      const updatedData = { message: '수정된 알림 메시지' };
+      testNotification = await request(`${API_BASE}/notifications/${testNotification.notificationID}`, 'PUT', updatedData);
+      output.textContent = '알림 수정 결과:\n' + JSON.stringify(testNotification, null, 2);
+    });
+
+    document.getElementById('deleteNotification').addEventListener('click', async () => {
+      if (!testNotification || !testNotification.notificationID) {
+        output.textContent = '먼저 알림을 생성하세요.';
+        return;
+      }
+      const result = await request(`${API_BASE}/notifications/${testNotification.notificationID}`, 'DELETE');
+      output.textContent = '알림 삭제 결과:\n' + JSON.stringify(result, null, 2);
+      testNotification = null;
+    });
+      
+  // 🔐 로그인 시도
+    document.getElementById('loginUser').addEventListener('click', async () => {
+      const email = document.getElementById('emailInput').value.trim();
+      const password = document.getElementById('pwInput').value.trim();
+
+      if (!email || !password) {
+        output.textContent = '이메일과 비밀번호를 모두 입력해주세요.';
+        return;
+      }
+
+      const loginResult = await request(`${API_BASE}/users/login`, 'POST', {
+        userEmail: email,
+        userPW: password
+      });
+
+      if (loginResult.userID) {
+        output.textContent = '✅ 로그인 성공!\n' + JSON.stringify(loginResult, null, 2);
+        testUser = loginResult; // 로그인에 성공한 유저를 testUser로 저장
+      } else {
+        output.textContent = '❌ 로그인 실패:\n' + JSON.stringify(loginResult, null, 2);
+      }
+    });
+
+  </script>
+</body>
+</html>
+ 

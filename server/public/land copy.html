@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Land Page</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <!-- 헤드 영역 -->
+  <header class="header">
+    <!-- <div class="logo">N</div> -->
+    <img class="logo_topleft" src="./assets/logos/nonji_logo.svg">
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Search...">
+      <img class="search-btn" src="./assets/imgs/search.svg">
+    </div>
+    <div class="header-buttons">
+      <div class="nav-icons" id="profile">
+        <img src="./assets/logos/logo_profile.svg">
+        <div>Profile</div>
+      </div>
+
+      <div class="nav-icons" id="colab">
+        <img src="./assets/logos/logo_colab.svg">
+        <div>Colab</div>
+      </div>
+
+      <div class="nav-icons" id="setting">
+        <img src="./assets/logos/logo_setting.svg">
+        <div>Setting</div>
+      </div>
+
+      <div class="nav-icons" id="Log out">
+        <img src="./assets/logos/logo_logout.svg">
+        <div>Log out</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 가로 네비게이션 버튼 (홈, 쇼츠, 링크) -->
+  <div class="nav-buttons">
+    <button id="nav-home" class="nav-btn">Home</button>
+    <button id="nav-shorts" class="nav-btn">shorts</button>
+    <button id="nav-link" class="nav-btn">link</button>
+  </div>
+
+  <!-- 분야 선택 바 (가로 6개 버튼, 기능 없음) -->
+  <div class="field-bar">
+    <button class="field-btn">Engineering &amp; Computing</button>
+    <button class="field-btn">Natural Sciences</button>
+    <button class="field-btn">Life Sciences</button>
+    <button class="field-btn">Mathematics</button>
+    <button class="field-btn">Social Sciences &amp; Humanities</button>
+    <button class="field-btn">Design / Art / Media</button>
+  </div>
+
+  <!-- 메인 컨테이너 -->
+  <div class="main-container">
+    <!-- 좌측 사이드바: 프로필 및 사용자 정보 -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img class="profile-image" src="img/profile_placeholder.png" alt="Profile">
+        <div class="user-info">
+          <h2 class="user-name">User Name</h2>
+          <p class="user-intro">User Intro...</p>
+          <p class="user-email">Email: user@example.com</p>
+          <div class="hashtags"></div>
+        </div>
+      </div>
+    </aside>
+    <!-- 오른쪽 콘텐츠 영역: 네비게이션 버튼에 따라 전환 -->
+    <section class="content">
+      <!-- 각 페이지는 기본적으로 모두 숨김 -->
+      <div id="content-home" class="content-page">
+        <h2>Home</h2>
+        <p>홈 페이지 내용입니다.</p>
+      </div>
+      <div id="content-shorts" class="content-page" style="display: none;">
+        <h2>shorts</h2>
+        <p>쇼츠 내용 입니다.</p>
+      </div>
+      <div id="content-link" class="content-page" style="display: none;">
+        <h2>link</h2>
+        <p>AI Link 내용 입니다.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Land 전용 JS (파일 경로: public/js/land.js) -->
+  <script src="js/land.js"></script>
+</body>
+</html>

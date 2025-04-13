@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>실시간 채팅방</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #chat-box { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; background: #f9f9f9; }
+    #chat-box div { margin-bottom: 8px; }
+    #chat-input { width: 80%; padding: 10px; }
+    #send-btn { padding: 10px 20px; }
+  </style>
+</head>
+<body>
+  <h1>💬 실시간 채팅방</h1>
+  <p><strong>Room ID:</strong> <span id="room-id">로딩 중...</span></p>
+  <div id="chat-box"></div>
+  <input type="text" id="chat-input" placeholder="메시지를 입력하세요" />
+  <button id="send-btn">보내기</button>
+
+  <!-- Socket.IO 클라이언트 CDN -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+
+  <script>
+    // 현재 페이지 URL에서 roomID 추출
+    const roomID = window.location.pathname.split('/').pop();
+    document.getElementById('room-id').textContent = roomID;
+
+    // userID는 테스트용으로 임시 생성 (실제 로그인 시스템이 있다면 대체)
+    const userID = 'user_' + Math.floor(Math.random() * 1000);
+
+    const socket = io(); // 기본 연결 (같은 origin)
+
+    // 소켓 연결되면 방 참여
+    socket.emit('joinRoom', roomID);
+
+    // 메시지 수신 처리
+    socket.on('chatMessage', (msgObj) => {
+      const chatBox = document.getElementById('chat-box');
+      const msg = document.createElement('div');
+      msg.textContent = `[${msgObj.userID}] ${msgObj.message}`;
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    });
+
+    // 메시지 전송
+    document.getElementById('send-btn').addEventListener('click', () => {
+      const input = document.getElementById('chat-input');
+      const message = input.value.trim();
+      if (message) {
+        socket.emit('chatMessage', { roomID, userID, message });
+        input.value = '';
+      }
+    });
+
+    // 엔터 키로도 메시지 전송
+    document.getElementById('chat-input').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        document.getElementById('send-btn').click();
+      }
+    });
+  </script>
+</body>
+</html>

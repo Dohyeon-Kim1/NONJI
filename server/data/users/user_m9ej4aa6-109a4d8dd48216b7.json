@@ -1,0 +1,17 @@
+{
+  "userName": "테스트 유저",
+  "userEmail": "test@example.com",
+  "userPW": "password",
+  "userIntro": "테스트용 자기소개",
+  "representatives": [
+    0,1,5
+  ],
+  "hashTags": [
+    "MLDL",
+    "CV",
+    "NLP",
+    "RL"
+  ],
+  "userID": "user_m9ej4aa6-109a4d8dd48216b7",
+  "signupDate": "2025-04-12T18:08:10.254Z"
+}

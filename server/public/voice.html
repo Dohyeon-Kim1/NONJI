@@ -1,0 +1,23 @@
+<!-- public/voice.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>음성 채팅</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    #remoteAudio { margin-top: 20px; }
+    button { padding: 10px 20px; margin: 10px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>🎙️ 실시간 음성 채팅</h1>
+  <p>Room ID: <span id="roomID"></span></p>
+  <button id="startCall">통화 시작</button>
+  <button id="endCall" disabled>통화 종료</button>
+  <audio id="remoteAudio" autoplay></audio>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/voice.js"></script>
+</body>
+</html>
