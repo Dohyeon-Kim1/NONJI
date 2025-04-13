@@ -1,0 +1,222 @@
+/* 전체 컨테이너 */
+.group {
+  width: 1000px;         /* 전체적으로 가로폭을 넓게 설정 */
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+/* 상단 헤더 영역 */
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 헤더 왼쪽 영역: 프로필 & 기본 정보 */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 프로필 이미지 */
+.RP_user_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 사용자 이름 및 시간 */
+.RP_user_name {
+  font-family: "SUIT-Bold", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-100);
+}
+
+.RP_time {
+  font-family: "SUIT-Bold", Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--gray-100);
+}
+
+/* My Paper 텍스트 */
+.RP_my_paper {
+  font-family: "SUIT-ExtraBold", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-300);
+}
+
+/* 헤더 오른쪽 영역: 원본 링크 & 북마크 */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.RP_link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.RP_link_img {
+  width: 25px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.RP_link_txt {
+  font-family: "SUIT-Medium", Helvetica, sans-serif;
+  font-size: 15px;
+  color: var(--gray-300);
+}
+
+.RP_bookmark {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* 메인 영역 (제목 + 본문) */
+.group-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.RP_paper_title {
+  font-family: "SUIT-ExtraBold", Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+}
+
+/* 본문 영역: 텍스트와 이미지 좌우 배치 */
+.group-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.RP_paper_content {
+  flex: 1;
+  font-family: "Pretendard-Medium", Helvetica, sans-serif;
+  font-size: 15px;
+  color: #000;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 본문 이미지를 더 작게 조정 (예: 240px) */
+.RP_paper_img {
+  width: 240px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 하단 영역 (해시태그 & 인터랙션) */
+.group-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+/* 해시태그 영역 */
+.RP_tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* 해시태그 개별 스타일 */
+.RP_tag {
+  background-color: var(--gray-200);
+  border-radius: 21px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #000;
+}
+
+/* 인터랙션 영역 */
+.RP_inters {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.RP_inter_frame {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.RP_inter {
+  width: 20px;
+  height: 18px;
+}
+
+.RP_inter_num {
+  font-family: "SUIT-Bold", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-100);
+}
+
+.RP_colab_frame {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.RP_colab {
+  font-family: "SUIT-Bold", Helvetica, sans-serif;
+  font-size: 18px;
+  color: var(--primary-100);
+}
+
+.RP_pp {
+  width: 21px;
+  height: 21px;
+  object-fit: cover;
+}
+/* 해시태그 개별 스타일 (회색 박스) */
+.RP_tag {
+  display: inline-block;    /* 텍스트 길이에 맞춰 크기를 자동 조절 */
+  width: auto;              /* 불필요한 고정 너비 제거 */
+  height: auto;
+  background-color: var(--gray-200);
+  border-radius: 21px;
+  padding: 6px 12px;        /* 좌우 패딩을 이용하여 적당한 여백 확보 */
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;      /* 텍스트가 한 줄로 표시되도록 설정 */
+}
+.RP_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.RP_hashtag, .RP_tag {
+  position: static !important;
+  z-index: auto !important;
+}

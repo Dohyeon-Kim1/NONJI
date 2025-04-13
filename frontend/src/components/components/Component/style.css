@@ -1,0 +1,143 @@
+.component {
+  height: 534px;
+  position: relative;
+  width: 288px;
+}
+
+.component .overlap-group-4 {
+  height: 506px;
+  left: 0;
+  position: absolute;
+  top: -16px;
+  width: 290px;
+}
+
+.component .group-15 {
+  height: 443px;
+  left: 0;
+  position: absolute;
+  top: 62px;
+  width: 290px;
+}
+
+.component .text-wrapper-29 {
+  color: #000000;
+  font-family: "SUIT-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  left: 37px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 419px;
+}
+
+.component .image-6 {
+  height: 418px;
+  left: -10px;
+  position: absolute;
+  top: -6px;
+  width: 308px;
+}
+
+.component .frame-19 {
+  align-items: center;
+  display: flex;
+  gap: 7px;
+  height: 17px;
+  left: 158px;
+  position: absolute;
+  top: 422px;
+  width: 57px;
+}
+
+.component .vector-14 {
+  height: 18.31px;
+  margin-bottom: -0.83px;
+  margin-top: -0.83px;
+  position: relative;
+  width: 20.34px;
+}
+
+.component .text-wrapper-30 {
+  color: var(--gray-600);
+  font-family: "SUIT-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-right: -6.76px;
+  margin-top: -0.67px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.component .frame-20 {
+  align-items: center;
+  display: flex;
+  gap: 7px;
+  height: 15px;
+  left: 226px;
+  position: absolute;
+  top: 423px;
+  width: 62px;
+}
+
+.component .group-16 {
+  height: 18.31px;
+  margin-bottom: -1.75px;
+  margin-left: -1.02px;
+  margin-top: -1.75px;
+  position: relative;
+  width: 24.41px;
+}
+
+.component .text-wrapper-31 {
+  color: var(--gray-600);
+  font-family: "SUIT-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-right: -7.40px;
+  margin-top: -1.60px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.component .ellipse-4 {
+  height: 31px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 413px;
+  width: 30px;
+}
+
+.component .element {
+  color: #ff8b78;
+  font-family: "Noto Sans KR", Helvetica;
+  font-size: 128px;
+  font-weight: 700;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.component .text-wrapper-32 {
+  color: #000000;
+  font-family: "SUIT-Bold", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  left: -2px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 506px;
+}

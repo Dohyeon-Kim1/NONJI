@@ -1,0 +1,329 @@
+.container {
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.container .div {
+  background-color: #fefefe;
+  height: 1080px;
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+}
+
+.container .overlap-group {
+  background-color: #323e58;
+  height: 1080px;
+  left: 996px;
+  position: absolute;
+  top: 0;
+  width: 949px;
+}
+
+.container .text-wrap_login {
+  color: var(--primary-300);
+  font-family: "Buttershine Serif-Regular", Helvetica;
+  font-size: 48px;
+  font-weight: 400;
+  left: 153px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 271px;
+  white-space: nowrap;
+}
+
+.password {
+  outline: none; /* 테두리 안 생기게 */
+  cursor: text; /* 커서 나오게 */
+  user-select: text;
+  pointer-events: auto; /* 마우스 이벤트 활성화 */
+  white-space: pre-wrap; /* 줄바꿈 허용 */
+}
+
+.container .p {
+  color: #ffffff;
+  font-family: "Buttershine Serif-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 209px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 345px;
+  white-space: nowrap;
+}
+
+.container .humaaans-research {
+  height: 457px;
+  left: 119px;
+  position: absolute;
+  top: 420px;
+  width: 671px;
+}
+
+.container .logo {
+  height: 84px;
+  left: 187px;
+  position: absolute;
+  top: 188px;
+  width: 208px;
+}
+
+.container .text-info-login1 {
+  color: #000000;
+  font-family: "Pretendard-Bold", Helvetica;
+  font-size: 44.6px;
+  font-weight: 700;
+  left: 193px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 310px;
+  white-space: nowrap;
+}
+
+.container .text-info-login2 {
+  color: #000000;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 19.6px;
+  font-weight: 400;
+  left: 193px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 387px;
+  white-space: nowrap;
+}
+
+.container .overlap {
+  background-color: #ffffff;
+  border: 1.5px solid;
+  border-color: #e7e7e7;
+  border-radius: 12px;
+  height: 78px;
+  left: 193px;
+  position: absolute;
+  top: 462px;
+  width: 286px;
+}
+
+.container .group {
+  height: 26px;
+  left: 88px;
+  position: relative;
+  top: 26px;
+  width: 108px;
+}
+
+.container .text-google {
+  color: #000000;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 19.6px;
+  font-weight: 500;
+  left: 42px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 1px;
+  white-space: nowrap;
+}
+
+.container .google-image {
+  height: 26px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 26px;
+}
+
+.container .div-wrap_login {
+  background-color: var(--primary-100);
+  border-radius: 12px;
+  height: 62px;
+  left: 193px;
+  position: absolute;
+  top: 803px;
+  width: 592px;
+}
+
+.container .text-wrap_login-5 {
+  color: #ffffff;
+  font-family: "Pretendard-SemiBold", Helvetica;
+  font-size: 19.6px;
+  font-weight: 600;
+  left: 268px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.container .group-wrap_login {
+  background-color: #ffffff;
+  border: 1.5px solid;
+  border-color: #e7e7e7;
+  border-radius: 12px;
+  height: 78px;
+  left: 499px;
+  position: absolute;
+  top: 462px;
+  width: 286px;
+}
+
+.container .group-2 {
+  height: 28px;
+  left: 68px;
+  position: relative;
+  top: 24px;
+  width: 147px;
+}
+
+.container .image-wrap_login {
+  background-color: #f9e000;
+  border-radius: 14px;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.container .img {
+  height: 23px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 24px;
+}
+
+.container .text-wrap_login-6 {
+  color: #000000;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 19.6px;
+  font-weight: 500;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 3px;
+  white-space: nowrap;
+}
+
+.container .group-3 {
+  height: 19px;
+  left: 336px;
+  position: absolute;
+  top: 890px;
+  width: 311px;
+}
+
+.container .text-wrap_login-7 {
+  color: #535353;
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.container .text-wrap_login-8 {
+  color: var(--primary-300);
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 175px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+/* 기존 .frame 클래스를 사용한 박스 스타일 */
+.frame {
+  left: 193px !important;
+  position: absolute !important;
+  top: 685px !important;
+}
+
+/* input 필드 자체 스타일 */
+.input-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  color: #333;
+}
+
+.container .frame_login_password {
+  left: 193px !important;
+  position: absolute !important;
+  top: 685px !important;
+}
+
+.container .frame_login_id {
+  left: 193px !important;
+  position: absolute !important;
+  top: 599px !important;
+}
+
+.container .group-4 {
+  height: 19px;
+  left: 202px;
+  position: absolute;
+  top: 560px;
+  width: 583px;
+}
+
+.container .group-5 {
+  height: 19px;
+  left: 213px;
+  position: absolute;
+  top: 0;
+  width: 159px;
+}
+
+.container .text-wrap_login-9 {
+  color: var(--gray-300);
+  font-family: "Pretendard-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.container .line {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}
+
+.container .line-2 {
+  height: 1px;
+  left: 384px;
+  object-fit: cover;
+  position: absolute;
+  top: 9px;
+  width: 199px;
+}

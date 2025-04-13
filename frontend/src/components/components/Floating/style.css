@@ -1,0 +1,33 @@
+.group-1686557941 {
+  position: fixed; /* 💡 브라우저 기준으로 고정 */
+  bottom: 40px;    /* 브라우저 하단 기준 */
+  right: 40px;     /* 브라우저 우측 기준 */
+  background-color: var(--primary-100);
+  border-radius: 54px;
+  box-shadow: 0px 4px 7px #0000002e;
+  height: 72px;
+  width: 216px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* 거의 최상위로 */
+  cursor: pointer;
+  padding: 0 16px;
+  gap: 10px;
+}
+
+.group-1686557941 .text-wrapper-28 {
+  color: #ffffff;
+  font-family: "SUIT-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  position: static; /* ✅ 기본 위치로 (flex에 따라 정렬됨) */
+}
+
+.group-1686557941 .group-14 {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  position: static; /* ✅ 기본 위치로 */
+}

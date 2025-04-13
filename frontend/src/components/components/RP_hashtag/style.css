@@ -1,0 +1,21 @@
+.RP_hashtag {
+  align-items: center;
+  background-color: var(--variable-collection-gray-500);
+  border-radius: 24px;
+  display: inline-flex;
+  gap: 10px;
+  padding: 7px 13px;
+  position: relative;
+}
+
+.RP_hashtag .generative-models {
+  color: var(--primary-100);
+  font-family: "SUIT-Bold", Helvetica;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}

@@ -1,0 +1,34 @@
+.frame {
+  align-items: center;
+  background-color: #fafcfe;
+  border: 1px solid;
+  border-color: #e6e8ea;
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  height: 68px;
+  padding: 22px 47px;
+  position: relative;
+  width: 592px;
+}
+.input-field {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 19.6px;
+  color: #1d1d1f;
+  font-family: "Pretendard-Medium", Helvetica;
+  outline: none;
+}
+.frame .password {
+  color: #a3a8b2;
+  font-family: "Pretendard-Medium", Helvetica;
+  font-size: 19.6px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -0.50px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
